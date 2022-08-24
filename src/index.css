@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --main-font: "Lexend Deca", sans-serif;
+  --theme-yellow: #ffd571;
+  --theme-blue: #83c4be;
+  --theme-grey: #f6f6f4;
+  --theme-dark-grey: #d3d3d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: var(--main-font);
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-calendar-picker-indicator {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--bg-clr);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--sec-bg-clr);
+  border-radius: 5px;
+}
+
+.success {
+  background-color: var(--bg-success);
+  color: var(--clr-success);
+}
+
+.danger {
+  background-color: var(--bg-danger);
+  color: var(--clr-danger);
+}
+
+.primary {
+  background-color: var(--bg-primary);
+  color: var(--clr-primary);
+}
+
+.warning {
+  background-color: var(--bg-warning);
+  color: var(--clr-warning);
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.input-group {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.input-group input,
+.input-group textarea {
+  background-color: inherit;
+  color: var(--txt-clr);
+  font-size: 1em;
+  padding: 10px 10px;
+  border: none;
+  border: 2px solid var(--theme-dark-grey);
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.input-group input::-webkit-input-placeholder,
+.input-group textarea::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.input-group input:-ms-input-placeholder,
+.input-group textarea:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.input-group input::-ms-input-placeholder,
+.input-group textarea::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  opacity: 0;
+}
+
+.input-group input:focus, .input-group input:not(:placeholder-shown),
+.input-group textarea:focus,
+.input-group textarea:not(:placeholder-shown) {
+  border-color: var(--theme-blue);
+}
+
+.input-group input:focus ~ label, .input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+  -webkit-transform: translate(10px, -33px) scale(0.9);
+          transform: translate(10px, -33px) scale(0.9);
+  color: var(--theme-blue);
+  padding: 0 5px;
+  font-weight: 500;
+}
+
+.input-group select {
+  border-bottom: 2px solid #000;
+  padding: 10px 10px;
+  width: 100%;
+  border: 2px solid var(--theme-dark-grey);
+  border-radius: 5px;
+  color: var(--theme-dark-grey);
+  outline: none;
+  cursor: pointer;
+}
+
+.input-group textarea ~ label {
+  display: none !important;
+}
+
+.input-group textarea::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.input-group textarea:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.input-group textarea::-ms-input-placeholder {
+  opacity: 1;
+}
+
+.input-group textarea::placeholder {
+  opacity: 1;
+}
+
+.input-group label {
+  position: absolute;
+  padding: 0 20px;
+  margin-bottom: 2px;
+  color: var(--theme-dark-grey);
+  background-color: var(--theme-grey);
+  -webkit-transform: translate(4px, -11px) scale(1.02);
+          transform: translate(4px, -11px) scale(1.02);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.input-group button {
+  padding: 10px 30px;
+  background-color: var(--theme-blue);
+  border: 2px solid var(--theme-blue);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+  color: #fff;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.input-group button.outline {
+  background: transparent;
+  border-color: var(--theme-blue);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+main {
+  overflow-y: hidden;
+}
+/*# sourceMappingURL=index.css.map */
