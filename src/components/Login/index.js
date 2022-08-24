@@ -7,7 +7,7 @@ const Login = () => {
     <>
       <main className="auth-container">
         <div className="auth-header">
-          <img src={auth} className="h-100" alt="Auth Background" />
+          <img src={auth} className="w-100" alt="Auth Background" />
         </div>
         <div className="auth-body">
           <div className="row" style={{ gridRowGap: "1rem" }}>
@@ -30,7 +30,7 @@ const Login = () => {
               <label for="password">Password*</label>
             </div>
             <div class="input-group">
-              <button className="w-100">Login</button>
+              <button className="w-100">Le Madarchod Login Kar</button>
             </div>
             <div className="text-center text-dark-grey">or</div>
             <div className="input-group">
