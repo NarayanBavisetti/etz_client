@@ -1,35 +1,40 @@
-import React,{ useState,useEffect } from "react";
-import {  useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { signUpUser, reset } from "../../features/auth/authSlice";
 import auth from "../../assets/images/auth.png";
 import google from "../../assets/images/google.png";
 import "./login.css";
 
 const Login = () => {
-
-  const [email,setEmail] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
   const navigate = useNavigate();
-	const dispatch = useDispatch();
-	const { data, isLoading, isError, isSuccess, message } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+  const { data, isLoading, isError, isSuccess, message } = useSelector(
+    (state) => state.auth,
+  );
 
-	useEffect(() => {
-		if (isError) {
-				alert({message});
-		}
-		if (isSuccess || data) {
-			    // navigate('/');
-					// alert('Login Successfull');
-	}
-		dispatch(reset());
-	}, [data, isError, isSuccess, message, isLoading, navigate, dispatch]);
-
-	const onSubmit = () => {
-    const values = {
-      email,password
+  useEffect(() => {
+    if (isError) {
+      alert({ message });
     }
+    if (isSuccess || data) {
+      // navigate('/');
+      // alert('Login Successfull');
+    }
+    dispatch(reset());
+  }, [data, isError, isSuccess, message, isLoading, navigate, dispatch]);
+
+  const onSubmit = () => {
+    const values = {
+      email,
+      password,
+    };
     console.log(values);
-			// dispatch(login(values));
-		}
+    // dispatch(login(values));
+  };
+
   return (
     <>
       <main className="auth-container">
@@ -59,11 +64,11 @@ const Login = () => {
               <label for="password">Password*</label>
             </div>
             <div class="input-group">
-              <button className="w-100" >Le Madarchod Login Kar</button>
+              <button className="w-100">Le Madarchod Login Kar</button>
             </div>
             <div className="text-center text-dark-grey">or</div>
             <div className="input-group">
-              <button className="google w-100" >
+              <button className="google w-100">
                 Continue with Google
                 <img src={google} alt="" />
               </button>

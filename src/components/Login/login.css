@@ -17,11 +17,21 @@
   padding-top: 7vh;
 }
 
+.auth-container .auth-body .auth-section {
+  display: none;
+}
+
+.auth-container .auth-body .auth-section.active {
+  display: block;
+}
+
 .auth-container .auth-body button.google {
   display: inline-block;
   background-color: #fff;
   border-color: #fff;
   color: #000;
+  -webkit-box-shadow: var(--shadow);
+          box-shadow: var(--shadow);
 }
 
 .auth-container .auth-body button.google img {
