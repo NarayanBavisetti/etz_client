@@ -69,6 +69,14 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
 }
 
 .input-group {

@@ -1,15 +1,10 @@
 import Login from "./components/Login/index";
 import SignUp from "./components/SignUp/index";
-import "./common.css";
+import Home from "./components/Home";
+import "./assets/css/common.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <SignUp />
-      </header>
-    </div>
-  );
-}
+const App = () => {
+  return <Home />;
+};
 
 export default App;

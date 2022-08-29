@@ -43,5 +43,47 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <script
+      src="https://kit.fontawesome.com/7368c40b21.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(window).ready(function () {
+        //Navbar Change Function
+        $(window).scroll(function () {
+          const height = window.innerHeight / 3;
+
+          if (window.pageYOffset >= height) {
+            $(".navbar").addClass("secondNavbar");
+          } else {
+            $(".navbar").removeClass("secondNavbar");
+          }
+        });
+        //End Function
+
+        //Menu Hamburger Toggle
+        $(".menuHamburger .lines").click(function () {
+          $(".navbar .links").toggleClass("show");
+          $(".navbar .closeBtn").toggleClass("show");
+
+          $("body").css("overflow", "hidden");
+        });
+
+        $(".navbar .closeBtn").click(function () {
+          $(".navbar .links").removeClass("show");
+          $(this).removeClass("show");
+
+          $("body").css("overflow", "auto");
+        });
+        //End Function
+      });
+    </script>
   </body>
 </html>
