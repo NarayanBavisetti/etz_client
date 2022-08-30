@@ -1,0 +1,99 @@
+.menu-container {
+  padding: 16px;
+}
+
+.menu-container .menu .category:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.menu-container .menu .category .title {
+  font-size: 1.1rem;
+  background-color: var(--theme-grey);
+  margin: 0 -16px;
+  padding: 10px 16px;
+}
+
+.menu-container .menu .category .item-list {
+  margin-top: 1rem;
+}
+
+.menu-container .menu .category .item-list .single-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  padding-top: 1rem;
+}
+
+.menu-container .menu .category .item-list .single-item:not(:first-child) {
+  margin-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.menu-container .menu .category .item-list .single-item .details .name {
+  font-size: 1rem;
+}
+
+.menu-container .menu .category .item-list .single-item .details .price {
+  font-size: 0.9rem;
+}
+
+.menu-container .menu .category .item-list .single-item .details .add-button {
+  display: none;
+  background-color: var(--theme-blue);
+  color: #fff;
+  height: 40px;
+  padding: 6px 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+.menu-container .menu .category .item-list .single-item .details .add-button.active {
+  display: inline-block;
+}
+
+.menu-container .menu .category .item-list .single-item .details .quantity {
+  display: none;
+}
+
+.menu-container .menu .category .item-list .single-item .details .quantity.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu-container .menu .category .item-list .single-item .details .quantity button {
+  background-color: var(--theme-blue);
+  color: #fff;
+  height: 40px;
+  width: 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.menu-container .menu .category .item-list .single-item .details .quantity button.increase {
+  border-radius: 0 5px 5px 0;
+}
+
+.menu-container .menu .category .item-list .single-item .details .quantity button.decrease {
+  border-radius: 5px 0 0 5px;
+}
+
+.menu-container .menu .category .item-list .single-item .details .quantity input {
+  height: 40px;
+  width: 60px;
+  background-color: var(--theme-blue);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  pointer-events: none;
+}
+
+.menu-container .menu .category .item-list .single-item .image img {
+  width: 100%;
+  border-radius: 7px;
+}
+/*# sourceMappingURL=menu.css.map */
