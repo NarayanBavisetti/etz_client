@@ -5,6 +5,8 @@ import { signUpUser, reset } from "../../features/auth/authSlice";
 import auth from "../../assets/images/auth.png";
 import google from "../../assets/images/google.png";
 import "../Login/login.css";
+import GoogleLogin from "react-google-login";
+import { gapi } from "gapi-script";
 
 const SignUp = () => {
   const [email, setEmail] = useState();
@@ -12,7 +14,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { data, isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.auth,
+    (state) => state.auth
   );
 
   useEffect(() => {
@@ -26,16 +28,38 @@ const SignUp = () => {
     // dispatch(reset());
   }, [data, isError, isSuccess, message, isLoading, navigate, dispatch]);
 
+  useEffect(() => {
+    function start() {
+      gapi.client.init({
+        clientId: process.env.REACT_APP_CLIENT_ID,
+        scope: "",
+      });
+    }
+
+    gapi.load("client:auth2", start);
+  });
+
   const onSubmit = () => {
     const values = {
       email,
       password,
     };
-    console.log(values);
+
     dispatch(signUpUser(values));
     setSection(2);
   };
+  const googleFailure = (error) => {
+    console.log(error);
+  };
 
+  const googleSuccess = async (res) => {
+    navigate("/");
+    console.log(res);
+    // res.tokenId;
+    // res.profileObj.name;
+    // res.profileObj.email;
+    // res.profileObj.imageUrl
+  };
   const [section, setSection] = useState(1);
 
   return (
@@ -96,12 +120,24 @@ const SignUp = () => {
                 </button>
               </div>
               <div className="text-center text-dark-grey">or</div>
-              <div className="input-group">
-                <button className="google w-100">
-                  Continue with Google
-                  <img src={google} alt="" />
-                </button>
-              </div>
+              <GoogleLogin
+                clientId={process.env.REACT_APP_CLIENT_ID}
+                cookiePolicy="single_host_origin"
+                render={(renderProps) => (
+                  <div className="input-group">
+                    <button
+                      className="google w-100"
+                      onClick={renderProps.onClick}
+                      disabled={renderProps.disabled}
+                    >
+                      Continue with Google
+                      <img src={google} alt="" />
+                    </button>
+                  </div>
+                )}
+                onSuccess={googleSuccess}
+                onFailure={googleFailure}
+              />
             </div>
           </section>
           <section
