@@ -1,0 +1,102 @@
+.menu-container {
+  padding: 16px;
+
+  .menu {
+    .category {
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+
+      .title {
+        font-size: 1.1rem;
+        background-color: var(--theme-grey);
+        margin: 0 -16px;
+        padding: 10px 16px;
+      }
+
+      .item-list {
+        margin-top: 1rem;
+
+        .single-item {
+          display: grid;
+          grid-template-columns: 2fr 1fr;
+          padding-top: 1rem;
+
+          &:not(:first-child) {
+            margin-top: 1rem;
+            border-top: 1px solid rgba($color: #000, $alpha: 0.1);
+          }
+
+          .details {
+            .name {
+              font-size: 1rem;
+            }
+
+            .price {
+              font-size: 0.9rem;
+            }
+
+            .add-button {
+              display: none;
+              background-color: var(--theme-blue);
+              color: #fff;
+              height: 40px;
+              padding: 6px 20px;
+              font-size: 0.9rem;
+              font-weight: 600;
+              border-radius: 5px;
+
+              &.active {
+                display: inline-block;
+              }
+            }
+
+            .quantity {
+              display: none;
+
+              &.active {
+                display: flex;
+              }
+
+              button {
+                background-color: var(--theme-blue);
+                color: #fff;
+                height: 40px;
+                width: 40px;
+                font-size: 1.2rem;
+                font-weight: 600;
+
+                &.increase {
+                  border-radius: 0 5px 5px 0;
+                }
+
+                &.decrease {
+                  border-radius: 5px 0 0 5px;
+                }
+              }
+
+              input {
+                height: 40px;
+                width: 60px;
+                background-color: var(--theme-blue);
+                color: #fff;
+                text-align: center;
+                font-weight: 600;
+                border: none;
+                outline: none;
+                pointer-events: none;
+              }
+            }
+          }
+
+          .image {
+            img {
+              width: 100%;
+              border-radius: 7px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
