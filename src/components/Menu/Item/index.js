@@ -1,6 +1,6 @@
 import item1 from "../../../assets/images/food-item-1.jpeg";
 import item2 from "../../../assets/images/food-item-2.jpg";
-import Quantity from "../Quantity/index";
+import Quantity from "./Quantity/index";
 
 const Item = (props) => {
   return (
