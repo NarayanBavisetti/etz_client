@@ -5,7 +5,10 @@ const Menu = () => {
   return (
     <>
       <main className="menu-container">
-        <div className="info"></div>
+        <div className="info">
+          <h1 className="name">Cad M Cad B</h1>
+          <div className="location">Gurudwara Road, Durg</div>
+        </div>
         <div className="menu">
           <div className="category">
             <h2 className="title">Wafflez(3)</h2>

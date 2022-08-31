@@ -1,6 +1,20 @@
 .menu-container {
   padding: 16px;
 
+  .info {
+    padding-bottom: 1rem;
+
+    .name {
+      font-size: 1.4rem;
+      margin: 0;
+    }
+
+    .location {
+      color: var(--black-50);
+      font-size: 0.9rem;
+    }
+  }
+
   .menu {
     .category {
       &:not(:first-child) {
@@ -28,6 +42,13 @@
           }
 
           .details {
+            .meta {
+              img {
+                width: 10px;
+                height: 10px;
+              }
+            }
+
             .name {
               font-size: 1rem;
             }
@@ -75,7 +96,7 @@
                 }
               }
 
-              input {
+              .value {
                 height: 40px;
                 width: 60px;
                 background-color: var(--theme-blue);

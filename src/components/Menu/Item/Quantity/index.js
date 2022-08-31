@@ -16,7 +16,7 @@ const Quantity = () => {
         <button type="button" className="decrease">
           -
         </button>
-        <input type="number" className="quantity" />
+        <input type="number" className="value" />
         <button type="button" className="increase">
           +
         </button>
