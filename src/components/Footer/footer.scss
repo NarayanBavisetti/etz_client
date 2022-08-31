@@ -1,0 +1,32 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--theme-yellow);
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 25px 25px 0 0;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+
+    .single-link {
+      display: grid;
+      place-items: center;
+      color: #000;
+
+      i {
+        font-size: 0.9rem;
+      }
+
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

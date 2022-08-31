@@ -24,6 +24,13 @@ const Menu = () => {
               <Item name="Margherita" price="149" />
             </div>
           </div>
+          <div className="category">
+            <h2 className="title">Burger(3)</h2>
+            <div className="item-list">
+              <Item name="Cheese Burger" price="149" />
+              <Item name="Triple Cheese Burger" price="149" />
+            </div>
+          </div>
         </div>
       </main>
     </>

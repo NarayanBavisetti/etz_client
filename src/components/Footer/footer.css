@@ -1,0 +1,40 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--theme-yellow);
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 25px 25px 0 0;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .links {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+}
+
+.footer .links .single-link {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: #000;
+}
+
+.footer .links .single-link i {
+  font-size: 0.9rem;
+}
+
+.footer .links .single-link span {
+  font-size: 0.8rem;
+}
+/*# sourceMappingURL=footer.css.map */
